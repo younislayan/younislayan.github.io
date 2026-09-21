@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Layan Younis</title>
+<meta name="description" content="Layan Younis — Computer Science student working in systems programming and AI education.">
+<style>
+  :root {
+    --bg: #fbfaf7;
+    --surface: #ffffff;
+    --text: #1d1b19;
+    --muted: #6b6560;
+    --line: #e8e4de;
+    --accent: #c2410c;
+    --accent-soft: #fdeee6;
+    --tag: #f2efe9;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #151413;
+      --surface: #1e1c1a;
+      --text: #efebe6;
+      --muted: #a39c94;
+      --line: #2f2c29;
+      --accent: #fb923c;
+      --accent-soft: #2e1f16;
+      --tag: #282522;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+    font-size: 17px;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 20px; }
+
+  nav {
+    position: sticky; top: 0; z-index: 10;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  nav .wrap { display: flex; justify-content: space-between; align-items: center; height: 56px; }
+  nav .logo { font-weight: 700; color: var(--text); text-decoration: none; }
+  nav .links { display: flex; gap: 20px; }
+  nav .links a { color: var(--muted); text-decoration: none; font-size: 15px; }
+  nav .links a:hover { color: var(--accent); }
+
+  header { padding: 72px 0 48px; }
+  .hello { color: var(--accent); font-weight: 600; margin: 0 0 8px; }
+  h1 { font-size: clamp(36px, 7vw, 52px); line-height: 1.1; margin: 0 0 16px; letter-spacing: -0.02em; }
+  .lead { font-size: 19px; color: var(--muted); margin: 0 0 28px; max-width: 34em; }
+  .buttons { display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn {
+    display: inline-block; padding: 10px 18px; border-radius: 8px;
+    text-decoration: none; font-weight: 600; font-size: 15px;
+    border: 1px solid var(--line); color: var(--text); background: var(--surface);
+  }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .btn:hover { transform: translateY(-1px); }
+
+  section { padding: 40px 0; border-top: 1px solid var(--line); }
+  h2 { font-size: 14px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); margin: 0 0 24px; }
+
+  .card {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+    padding: 22px; margin-bottom: 16px;
+  }
+  .card h3 { margin: 0 0 6px; font-size: 19px; }
+  .card .meta { color: var(--muted); font-size: 14px; margin: 0 0 10px; }
+  .card p { margin: 0 0 12px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; }
+  .tags span { background: var(--tag); color: var(--muted); font-size: 13px; padding: 3px 10px; border-radius: 999px; }
+  .badge { display: inline-block; background: var(--accent-soft); color: var(--accent); font-size: 12px; font-weight: 600; padding: 2px 10px; border-radius: 999px; margin-left: 6px; vertical-align: middle; }
+  a { color: var(--accent); }
+
+  .skills { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px; }
+  .skills .card { margin: 0; }
+  .skills h3 { font-size: 16px; }
+  .skills p { color: var(--muted); font-size: 15px; margin: 0; }
+
+  .langs { display: flex; flex-wrap: wrap; gap: 12px; }
+  .lang { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px 18px; flex: 1 1 160px; }
+  .lang b { display: block; font-size: 17px; }
+  .lang span { color: var(--muted); font-size: 14px; }
+
+  footer { padding: 40px 0 60px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
+
+  @media (max-width: 560px) {
+    nav .links { gap: 14px; }
+    nav .links a { font-size: 14px; }
+    header { padding: 48px 0 36px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#top">Layan Younis</a>
+    <div class="links">
+      <a href="#projects">Projects</a>
+      <a href="#open-source">Open source</a>
+      <a href="#skills">Skills</a>
+    </div>
+  </div>
+</nav>
+
+<main class="wrap" id="top">
+
+  <header>
+    <p class="hello">Hi, I'm</p>
+    <h1>Layan Younis</h1>
+    <p class="lead">
+      Computer Science student at the University of Haifa. I like working close to the machine —
+      I've written a Linux kernel driver — and I teach AI and robotics to students.
+    </p>
+    <div class="buttons">
+      <a class="btn primary" href="https://github.com/younislayan">GitHub</a>
+      <a class="btn" href="#projects">See my projects</a>
+    </div>
+  </header>
+
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <div class="card">
+      <h3>Linux kernel character device driver</h3>
+      <p class="meta">C · Linux kernel</p>
+      <p>
+        A loadable kernel module that creates two encryption devices — one Caesar cipher, one XOR.
+        Programs read and write to them like ordinary files. I implemented the full file-operations
+        interface, including <code>ioctl</code> for changing settings at runtime, allocated kernel
+        memory, and made sure everything is cleaned up correctly if something fails.
+      </p>
+      <div class="tags"><span>C</span><span>Linux kernel</span><span>ioctl</span><span>memory management</span></div>
+    </div>
+
+    <div class="card">
+      <h3>HSTS — online exam system</h3>
+      <p class="meta">Java · team of 5</p>
+      <p>
+        A client–server application for creating and running university exams: a JavaFX desktop
+        client, a multithreaded server, and a MySQL database. I was responsible for implementation
+        and testing — I wrote and ran the acceptance tests, documented the bugs they found, and fixed
+        a packaging problem that stopped the finished app from launching.
+      </p>
+      <div class="tags"><span>Java</span><span>JavaFX</span><span>MySQL</span><span>client–server</span></div>
+    </div>
+
+    <div class="card">
+      <h3>Unix shell</h3>
+      <p class="meta">C · POSIX</p>
+      <p>
+        A command-line shell that runs programs with <code>fork</code> and <code>execvp</code> and keeps
+        a command history in a growing array that I manage by hand — no memory leaks.
+      </p>
+      <div class="tags"><span>C</span><span>processes</span><span>dynamic memory</span></div>
+    </div>
+
+    <div class="card">
+      <h3>Virtual memory simulator</h3>
+      <p class="meta">C</p>
+      <p>
+        Simulates how a computer turns a program's addresses into real memory addresses, using a
+        TLB and a page table, and counts page faults along the way.
+      </p>
+      <div class="tags"><span>C</span><span>virtual memory</span><span>TLB</span></div>
+    </div>
+  </section>
+
+  <section id="open-source">
+    <h2>Open source</h2>
+    <div class="card">
+      <h3>Kubernetes <span class="badge">in review</span></h3>
+      <p class="meta">kubernetes/website · Arabic localization</p>
+      <p>
+        Found and fixed a mismatch in the Kubernetes website: the Arabic site title spelled
+        "Kubernetes" differently from every translated page.
+        <a href="https://github.com/kubernetes/website/pull/57643">Pull request #57643</a>.
+      </p>
+      <div class="tags"><span>Kubernetes</span><span>Hugo</span><span>Arabic</span></div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="card">
+      <h3>AI &amp; Robotics Instructor</h3>
+      <p class="meta">Tech-education startup · part-time</p>
+      <p>
+        I teach students to build working robots using AI tools, and explain technical ideas to
+        learners who have never programmed before.
+      </p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="card"><h3>Languages</h3><p>C, Java, Python, SQL</p></div>
+      <div class="card"><h3>Systems</h3><p>Linux kernel modules, processes, threads, virtual memory</p></div>
+      <div class="card"><h3>Backend</h3><p>Client–server apps, JDBC, Hibernate, MySQL</p></div>
+      <div class="card"><h3>Tools</h3><p>Git, GitHub, GCC, GDB, VS Code, JavaFX</p></div>
+    </div>
+  </section>
+
+  <section id="languages">
+    <h2>I speak</h2>
+    <div class="langs">
+      <div class="lang"><b>العربية</b><span>Arabic — native</span></div>
+      <div class="lang"><b>עברית</b><span>Hebrew — fluent</span></div>
+      <div class="lang"><b>English</b><span>English — fluent</span></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    Layan Younis · <a href="https://github.com/younislayan">github.com/younislayan</a>
+  </div>
+</footer>
+
+</body>
+</html>
