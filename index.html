@@ -76,6 +76,7 @@
   .card h3 { margin: 0 0 6px; font-size: 19px; }
   .card .meta { color: var(--muted); font-size: 14px; margin: 0 0 10px; }
   .card p { margin: 0 0 12px; }
+  .card video.demo { display: block; width: 100%; height: auto; border-radius: 8px; border: 1px solid var(--line); margin: 0 0 14px; background: var(--tag); }
   .tags { display: flex; flex-wrap: wrap; gap: 6px; }
   .tags span { background: var(--tag); color: var(--muted); font-size: 13px; padding: 3px 10px; border-radius: 999px; }
   .badge { display: inline-block; background: var(--accent-soft); color: var(--accent); font-size: 12px; font-weight: 600; padding: 2px 10px; border-radius: 999px; margin-left: 6px; vertical-align: middle; }
@@ -140,6 +141,9 @@
         worked example, or quiz you one question at a time. Built on the Claude API with streaming
         answers and a right-to-left interface.
       </p>
+      <video class="demo" src="study-helper-demo.mp4" poster="study-helper-poster.jpg"
+             controls muted playsinline preload="none"
+             aria-label="Demo: the study helper explaining recursion in Arabic, then quizzing on pointers"></video>
       <p>
         <a href="https://younislayan.github.io/study-helper/">Try it</a> ·
         <a href="https://github.com/younislayan/study-helper">Code</a>
